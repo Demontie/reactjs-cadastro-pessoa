@@ -17,7 +17,7 @@ class FormCadastro extends Component {
         event.preventDefault();                
         const data = this.state;
         Axios.post('http://localhost:4000/pessoas',data,{ headers: {'Access-Control-Allow-Origin': '*'}}).then(function(response){
-            console.log(response);
+            alert(response.mensagem);
         }).catch(function(error){
             console.log(error);    
         });                
